@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Book</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+  <h2>Order Confirmation</h2>
+  <div class="card mt-3">
+    <div class="card-body">
+      <h4><%= book.title %></h4>
+      <p><strong>Author:</strong> <%= book.author %></p>
+      <h4>Add Detils for Confirm your Order ! </h4>
+      <form action="/confirm-order" method="POST">
+  <!-- ✅ Send book ID -->
+  <input type="hidden" name="bookId" value="<%= book._id %>">
+
+  <div class="mb-3">
+    <label for="customerName" class="form-label">Your Name</label>
+    <input type="text" class="form-control" name="customerName" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="customerPhone" class="form-label">Phone Number</label>
+    <input type="tel" class="form-control" name="customerPhone" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Place Order</button>
+</form>
+
+      <p>Thank you for choosing this book!</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
