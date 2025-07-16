@@ -29,8 +29,8 @@ A simple book listing and ordering application built using **Node.js**, **Expres
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-username/book-order-app.git
-   cd book-order-app
+   git clone https://github.com/your-username/BookBookingSystem.git
+   cd BookBookingSystem
 Create a .env file
 Inside the root folder:
 ATLASDB_URL=mongodb+srv://<username>:<password>@cluster.mongodb.net/bookapp?retryWrites=true&w=majority
